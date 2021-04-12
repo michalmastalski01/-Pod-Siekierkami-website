@@ -86,7 +86,9 @@ td:hover:before{
     height: 60vh; 
     animation: welcome-images 20s linear forwards infinite;
 }
-
+footer{
+    height: 100px;
+}
 
 
 
