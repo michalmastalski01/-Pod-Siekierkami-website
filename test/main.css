@@ -1,0 +1,48 @@
+body{
+    font-family: 'Montserrat';
+    background-color: #0f0f0f;
+    margin: 0px;
+}
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    background-image: linear-gradient(to top right, slateblue, dodgerblue);
+    color: white;
+    text-shadow: black 1px 1px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s, filter 0.1s;
+}
+.btn:hover{
+    transform: translateY(-5px);
+    filter: drop-shadow(0px 0px 10px dodgerblue);
+}
+
+@keyframes btnAnim {
+    0%{
+        height: 50px;
+        width: 200px;
+    } 25%{
+        color: transparent;
+        text-shadow: none;
+    }
+    100% {
+        height: 100vh;
+        width: 100vw;
+        text-shadow: none;
+        color: transparent;
+        display: none;
+    }
+}
