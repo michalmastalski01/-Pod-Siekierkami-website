@@ -7,42 +7,108 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 20vh;
+    width: 100vw;
     background-color: transparent;
 }
-.btn{
+.btn, .btn2, .btn3, .btn4, .btn5{
     display: flex;
+    margin: 20px;
     justify-content: center;
     align-items: center;
     height: 50px;
     width: 200px;
-    background-image: linear-gradient(to top right, slateblue, dodgerblue);
+    background-color: #0f0f0f;
     color: white;
     text-shadow: black 1px 1px;
     text-transform: uppercase;
     font-size: 1.5rem;
-    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.5s, filter 0.1s;
+    overflow: hidden;
 }
-.btn:hover{
-    transform: translateY(-5px);
-    filter: drop-shadow(0px 0px 10px dodgerblue);
+/*pierwszy przycisk*/
+.btn::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 54px;
+    width: 0px;
+    background-color: tomato;
+    transition: 0.5s;
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 0px;
+    width: 204px;
+    background-color: tomato;
+    transition: 0.5s;
+}
+.btn:hover:before{
+    width: 200px;
+}
+.btn:hover:after{
+    height: 54px;
+}
+/*drugi przycisk*/
+.btn2{
+    background-color: transparent;
+    border: 2px solid white;
+}
+.btn2::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 50px;
+    width: 0px;
+    background-color: tomato;
+    transition: 0.5s;
+}
+.btn2:hover:before{
+    width: 200px;
+}
+/*trzeci przycisk*/
+.btn3{
+    background-color: transparent;
+    border: 2px solid white;
+}
+.btn3::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 0px;
+    width: 200px;
+    background-color: tomato;
+    transition: 0.5s;
+}
+.btn3:hover:before{
+    height: 50px;
+}
+/*czwarty przycisk*/
+.btn4{
+    letter-spacing: 0px;
+    transition: 0.5s;
+}
+.btn4:hover{
+    letter-spacing: 5px;
+}
+/*piąty przycisk*/
+.btn5{
+    background-color: transparent;
+    border: 2px solid white;
+}
+.btn5::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 0px;
+    width: 0px;
+    background-color: tomato;
+    transition: 0.5s;
+}
+.btn5:hover:before{
+    height: 50px;
+    width: 200px;
 }
 
-@keyframes btnAnim {
-    0%{
-        height: 50px;
-        width: 200px;
-    } 25%{
-        color: transparent;
-        text-shadow: none;
-    }
-    100% {
-        height: 100vh;
-        width: 100vw;
-        text-shadow: none;
-        color: transparent;
-        display: none;
-    }
-}
