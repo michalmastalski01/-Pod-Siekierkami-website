@@ -2,11 +2,13 @@ body{
     margin: 0px;
     background-color: white;
     box-sizing: border-box;
+    font-family: 'Courgette', cursive;
 }
 header{
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 25vh;
 }
 #logo{
     background-image: url("/images/logo.webp");
@@ -44,7 +46,7 @@ nav
     color: white;
     font-size: 1.5rem;
     width: 100%;
-    height: 10%;
+    height: 7vh;
 }
 table{
     margin-top: 15px;
@@ -55,26 +57,32 @@ td{
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
+    z-index: 2;
+    transition: transform 0.5s;
+}
+td:hover{
+    transform: scale(1.1);
 }
 td:before{
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
+    left: 0;
     width: 0;
+    z-index: -1;
     height: 100%;
-    background: transparent;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.5s;
+    border-bottom: 2px solid white;
+    transition: width 0.5s;
 
 }
 td:hover:before{
-    animation: borderAnim 0.5s ease-in-out forwards;
+    width: 100%;
 }
 #welcome{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/images/siekierkistare.webp);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     font-family: 'Courgette', cursive;
@@ -83,50 +91,35 @@ td:hover:before{
     color: white;
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 50%);
-    height: 60vh; 
+    height: 72vh; 
     animation: welcome-images 20s linear forwards infinite;
 }
 footer{
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    height: 5vh;
+    background-color: #0f0f0f;
+    color: white;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    background-color: #144c65;
+}
+.content h1{
+    font-size: 3rem;
+    margin-top: 5%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px black;
+    background-color: #144c65;
 }
 
 
 
-@keyframes borderAnim {
-    0%{
-        width: 0;
-        border-bottom-color: white;
-    } 100% {
-        width: 100%;
-        border-bottom-color: white;
-        animation-play-state: paused;
-    }
-}
-@keyframes welcome-images {
-    0% {
-        background-size: 110%;
-        background-image: url("/images/siekierkistare.webp");
-    }
-    32% {
-        background-size: 100%;
-        background-image: url("/images/siekierkistare.webp");
-    }
-    34%{
-        background-size: 110%;
-        background-image: url("/images/starakadra.webp");
-    }
-    65%{
-        background-size: 100%;
-        background-image: url("/images/starakadra.webp");
-    }
-    67% {
-        background-size: 110%;
-        background-image: url("/images/zupa.webp");
-    } 98%{
-        background-size: 100%;
-        background-image: url("/images/zupa.webp");
-    } 100% {
-        background-size: 110%;
-        background-image: url("/images/siekierkistare.webp");
-    }
-}
+
