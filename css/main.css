@@ -87,7 +87,7 @@ li:hover:before{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://michalmastalski01.github.io/siekierkistare.webp");
+    background-image: url("https://raw.githubusercontent.com/michalmastalski01/-Pod-Siekierkami-website/main/images/logo.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
