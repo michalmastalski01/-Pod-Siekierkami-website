@@ -87,7 +87,7 @@ li:hover:before{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/siekierkistare.webp");
+    background-image: url("https://michalmastalski01.github.io/siekierkistare.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
