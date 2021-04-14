@@ -12,11 +12,11 @@ header{
 }
 #logo{
     background-image: url("/images/logo.webp");
-    background-size: 120%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 300px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 #socials{
@@ -37,6 +37,7 @@ header{
 }
 nav
 {
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -46,24 +47,26 @@ nav
     color: white;
     font-size: 1.5rem;
     width: 100%;
-    height: 7vh;
+    overflow: hidden;
 }
-table{
-    margin-top: 15px;
-    margin-bottom: 15px;
+ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    display: inline;
 }
-td{
+li{
     position: relative;
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
     z-index: 2;
     transition: transform 0.5s;
+    display:inline;
 }
-td:hover{
+li:hover{
     transform: scale(1.1);
 }
-td:before{
+li:before{
     content: '';
     position: absolute;
     left: 0;
@@ -74,8 +77,11 @@ td:before{
     transition: width 0.5s;
 
 }
-td:hover:before{
+li:hover:before{
     width: 100%;
+}
+#hamburger{
+    display: none;
 }
 #welcome{
     display: flex;
@@ -91,7 +97,7 @@ td:hover:before{
     color: white;
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 50%);
-    height: 72vh; 
+    height: 72vh;
     animation: welcome-images 20s linear forwards infinite;
 }
 footer{
@@ -103,23 +109,69 @@ footer{
     background-color: #0f0f0f;
     color: white;
 }
-.content{
+.openhours{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    height: 25vh;
     background-color: #144c65;
 }
-.content h1{
-    font-size: 3rem;
-    margin-top: 5%;
-    padding: 20px;
+.openhours h1{
+    font-size: 2.5rem;
     color: white;
     text-align: center;
-    text-shadow: 5px 5px black;
-    background-color: #144c65;
+}
+.content{
+    padding: 15px;
+}
+.sticky{
+    position: fixed;
+    top: 0;
 }
 
+
+@media screen and (max-width: 768px) {
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 25vh;
+    }
+    #logo{
+        background-image: url("/images/logo.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    nav{
+        flex-direction: column;
+    }
+    ul{
+        display: none;
+    }
+    li{
+        margin: 10px;
+        width: 100vw;
+        float: left;
+        text-align: center;
+    }
+    #hamburger{
+        display: block;
+        padding: 20px;
+    }
+    #welcome{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .content h1{
+        font-size: 1.7rem;
+    }
+    footer{
+        font-size: 0.7rem;
+    }
+}
 
 
 
