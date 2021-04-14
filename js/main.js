@@ -20,8 +20,6 @@ hamburger.addEventListener("click", function hamNav() {
 });
 
 window.addEventListener("scroll", function stickyNav(){
-    console.log(nav.offsetTop);
-    console.log(window.pageYOffset);
     if(window.pageYOffset >= navPosition){
         x = true;
         nav.classList.add("sticky");

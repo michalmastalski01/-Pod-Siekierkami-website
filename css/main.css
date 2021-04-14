@@ -164,6 +164,7 @@ footer{
     #welcome{
         font-size: 2rem;
         text-align: center;
+        background-image: url(/images/siekierkistare-mobile.webp);
     }
     .content h1{
         font-size: 1.7rem;
