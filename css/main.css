@@ -241,7 +241,7 @@ footer p{
     }
     .welcome{
         position: relative;
-        background: url('/images/siekierkistare.webp');
+        background: url('../images/siekierkistare.webp');
         background-color: rgba(0, 0, 0, 0.7);
         background-repeat: no-repeat;
         background-size: cover;
