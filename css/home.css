@@ -1,0 +1,85 @@
+/* big welcome content stage */
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 68vh;
+    background: url('../images/siekierkistare-mobile.webp');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+}
+.welcome h1{
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+.welcome p{
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid white;
+    overflow: hidden;
+    z-index: 1;
+}
+.welcome p a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.welcome p::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    background-color: var(--background);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+}
+.welcome p:hover:before{
+    transform: scale(1);
+}
+.open-hours{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    background: var(--background);
+}
+.open-hours h2{
+    font-size: 0.1rem;
+    color: white;
+    text-shadow: 4px 4px black;
+    text-align: center;
+}
+@media screen and (max-width: 1000px){
+    .open-hours h2{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .welcome{
+        position: relative;
+        background: url('/images/siekierkistare.webp');
+        background-color: rgba(0, 0, 0, 0.7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+    }
+    .welcome h1{
+        font-size: 5rem;
+    }
+    .open-hours h2{
+        font-size: 3rem;
+    }
+}
