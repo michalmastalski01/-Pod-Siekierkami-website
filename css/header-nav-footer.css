@@ -171,6 +171,24 @@ footer p{
         font-size: 1.5rem;
         white-space: nowrap;
     }
+<<<<<<< HEAD:css/header-nav-footer.css
+=======
+    .welcome{
+        position: relative;
+        background: url('../images/siekierkistare.webp');
+        background-color: rgba(0, 0, 0, 0.7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+    }
+    .welcome h1{
+        font-size: 5rem;
+    }
+    .open-hours h2{
+        font-size: 3rem;
+    }
+>>>>>>> c1fd5f69c0882cae0b3f368c842a3bc6bc3946ef:css/main.css
 }
 
 @keyframes mouseClick {
